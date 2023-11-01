@@ -1,4 +1,4 @@
-# Advanced NLP – Interim Project Submission
+# Advanced NLP –  Project Submission
 
 ## About
 This repository consists of experiements conduced on Sarcasm and Irony datasets using various model architectures.
@@ -18,11 +18,23 @@ The quality of the language model is measured through confusion matrix and detai
 <li>  remove_special_patterns to replace words like 10334m delimiter words found in corpus.</li>
 <li>  remove_punctuation to remove the punctuations and it can be replaced with PUNCT </li></ol></li>
 
+#### Transformers specific preprocessing
+<li>
+Since transformers are powered by powerful tokenization like BPE etc, we restrcited preprocessing to following:
+<ol>
+<li>replace_url to replace urls with URL</li>
+<li>Include special token '[EMOTICON]' for the sentence where emoticons and text baesd smilies are present</li>
+<li>Include special token '[ELONGATED]' for the sentences where words with elongaged expressions present like "foreveeer", "yayyy", "Aweeeeesome", etc</li>
+</ol>
+</li>
+
 ### Model specific files
 <li>experiment/Irony_bilstm.ipynb consists of training code and evaluation loop methods for Bilstm model with attention </li>
 <li>experiment/irony_transformers_hf.ipynb consists of bidirectional encoder transformer model implementation</li>
 <li>experiment/irony_transformers_torch.ipynb consists of transformer encoder model implementation</li>
-<li>experiment/sarcasm_transformers_hf.ipynb consists of bidirectional transformer encoder model implementation for sarcasm dataset</li>
+<li>experiment/setfit_impl.ipynb consists of setfit few shot training implementation</li>
+<li>experiment/setfit_impl.ipynb consists of setfit few shot training implementation</li>
+<li>experiment/irony_tf_exponential.ipynb consists of exponential task specific postional encoding transformer training implementation</li>
 
 
 ### Dependencies
